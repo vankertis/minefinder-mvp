@@ -5,13 +5,16 @@ const ctx = canvas.getContext('2d');
 async function startVideo() {
     if (navigator.mediaDevices.getUserMedia) {
         try {
-            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            const stream = await navigator.mediaDevices.getUserMedia({ 
+                video: { facingMode: "environment" }
+            });
             video.srcObject = stream;
         } catch (error) {
             console.error('Error starting video:', error);
         }
     }
 }
+
 
 async function detectObjects() {
     const model = await cocoSsd.load();

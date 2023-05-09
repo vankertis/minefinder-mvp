@@ -27,3 +27,23 @@ canvas {
     position: absolute;
     z-index: 2;
 }
+
+#canvas {
+    position: absolute;
+    max-width: 90vw;
+  }
+  
+  .bbox {
+    border: 2px solid blue;
+    position: absolute;
+    max-width: 90vw;
+  }
+  
+  .bbox .label {
+    position: absolute;
+    color: blue;
+    font-size: 16px;
+    max-width: 90vw;
+    word-wrap: break-word;
+  }
+  
